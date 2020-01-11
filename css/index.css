@@ -1,0 +1,472 @@
+body {
+    font-family: sans-serif;
+    color: #353535;
+    margin: 0px;
+}
+
+h1, h2, h3 {
+    margin: 0px;
+    display: inline-block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input, textarea {
+    outline: none;
+    resize: none;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+form {
+    margin: 0px;
+}
+
+tr td:not(:last-child) {
+    vertical-align: top;
+}
+
+/* HLAVICKA */
+header {
+    text-align: center;
+    padding: 43px;
+}
+
+header h1 {
+    font-size: 100px;
+    line-height: 80px;
+    font-weight: 900;
+    padding-top: 45px;
+}
+
+header h2 {
+    font-weight: 600;
+    padding-top: 13px;
+    padding-left: 11px;
+    letter-spacing: 10px;
+    font-size: 12px;
+}
+
+header .rounded {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    border-radius: 100px;
+    border: 1px solid rgb(45, 40, 40);
+    background: white;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.14);
+}
+
+/* MENU */
+.content .tabs {
+    text-align: center;
+    position: relative;
+}
+
+.content .tabs:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: rgb(45, 40, 40);
+    height: 1px;
+    box-shadow: 0px 0px 20px black;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.content .tabs .min-tabs {
+    display: inline-block;
+    background: white;
+    z-index: 3;
+    position: relative;
+    padding: 0px 20px;
+}
+
+.content .tabs .min-tabs h3 {
+    color: #353535; 
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(45, 40, 40);
+    border-radius: 50px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+
+.content .tabs .min-tabs h3.active {
+    background: #f1efef;
+}
+
+.content .tabs .min-tabs h3:hover {
+    background: #f1efef;
+}
+
+.content .tabs .min-tabs h3 a {
+    display: inline-block;
+    padding: 28px 0px 32px 0px;
+}
+
+/* TABULKA */
+.content table {
+    margin: 40px auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0px 30px;
+}
+
+.content table tr td {
+    padding: 15px 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.content table thead tr td {
+    padding: 20px 5px;
+    color: rgba(53, 53, 53, 0.85);
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    background: #f1efef;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    border-bottom: 1px solid rgba(45, 40, 40, 0.4);
+}
+
+.content table tbody tr:nth-of-type(2n) td {
+    background: rgba(0,0,0,0.04);
+}
+
+.content table tbody tr td span,
+.edit {
+    background: white;
+    display: inline-block;
+    width: 28px;
+    height: 33px;
+    border-radius: 19px;
+    font-size: 22px;
+    padding: 0px 0px 0px 5px;
+    border: 1px solid rgb(45, 40, 40);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.content table tbody tr td span img {
+    width: 20px;
+    padding: 6px 0px 0px 2px;
+}
+
+.content table tbody tr td a:hover span {
+    background: #f1efef;
+}
+
+.content table tbody tr td:last-child {
+    padding: 5px 5px;
+    width:34px;
+}
+
+.content table tr.editing.other td span, 
+.edit.other {
+    background: #ffdfdf;
+    color: rgb(195, 1, 1);
+    border: 1px solid rgb(195, 1, 1);
+    box-shadow: 0px 0px 10px rgba(175, 2, 2, 0.2);
+    cursor: default;
+}
+
+.content table tr.editing.other td span img {
+    width: 20px;
+    padding: 6px 0px 0px 2px;
+}
+
+.content table tr.editing.me td span, 
+.edit.me {
+    background: #daffda;
+    color: #11a200;
+    border: 1px solid rgb(34, 160, 3);
+    box-shadow: 0px 0px 10px rgba(3, 148, 1, 0.2);
+    cursor: default;
+}
+
+.content table tr.editing.me td button {
+    width: 35px;
+    color: #353535;
+    border: 1px solid #353535;
+    background: white;
+    height: 35px;
+    border-radius: 17px 17px 0px 0px;
+    font-size: 20px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 17px;
+    box-shadow: 0px 0px 10px rgba(3, 148, 1, 0.2);
+    cursor: pointer;
+    padding: 0px;
+}
+
+.content table tr.editing.me td a span {
+    background: white;
+    color: #353535;
+    border: 1px solid #353535;
+    border-radius: 0px 0px 17px 17px;
+    padding-left: 8px;
+    width: 25px;
+    border-radius: 17px;
+    padding-top: 1.5px;
+    height: 31.5px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.content table tr.editing.me td a span img {
+    width: 18px;
+    padding: 5px 0px 0px 0px;
+}
+
+.content table tr.editing.me td button:hover,
+.content table tr.editing.me td a:hover span {
+    background: #f1efef;
+}
+
+.content table tr td textarea {
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 5px 5px 0px 0px;
+    text-align: left;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #353535;
+    padding-top: 2px;
+    height: 107px;
+    border-bottom:0px;
+}
+
+.content table tr td textarea:hover,
+.content table tr td textarea:focus {
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+.content table tr td .expire {
+    background: green;
+    width: 100%;
+    height: 5px;
+    border-radius: 0px 0px 5px 5px;
+    overflow: hidden;
+}
+
+@keyframes moveToEnd {
+    100% {
+      width:100%;
+    }
+}
+
+.content table tr td .expire div {
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-name: moveToEnd;
+    animation-fill-mode:forwards;
+
+    height: 5px;
+    background: red;
+    border-radius: 0px 0px 0px 5px;
+}
+
+.content table tbody tr td .flag {
+    padding-top: 74px;
+}
+
+/* STRANKOVANIE */
+.content .pagination {
+    width:411px;
+    margin:16px auto;
+    text-align:center;
+}
+
+.content .pagination div {
+    display: inline-block;
+}
+
+.content .pagination .first,
+.content .pagination .prev,
+.content .pagination .next,
+.content .pagination .last {
+    border: 1px solid rgb(45, 40, 40);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 9px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+
+.content .pagination .first:hover,
+.content .pagination .prev:hover,
+.content .pagination .next:hover,
+.content .pagination .last:hover {
+    background: #f1efef;
+}
+
+.content .pagination .first a,
+.content .pagination .last a {
+    padding: 13px 16px 14px 16px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.content .pagination .page {
+    padding:22px 0px;
+}
+
+.content .pagination .page input {
+    width: 50px;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #353535;
+    padding-top: 2px;
+}
+
+.content .pagination .page input[type=number]::-webkit-inner-spin-button, 
+.content .pagination .page input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.content .pagination .page input:hover,
+.content .pagination .page input:focus {
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+.content .pagination .prev a,
+.content .pagination .next a {
+    padding: 13px 20px 12px 20px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.content .pagination .next,
+.content .pagination .last {
+    float: right;
+}
+
+.content .pagination .prev,
+.content .pagination .first {
+    float: left;
+}
+
+/* LEGENDA */
+.content .legend {
+    text-align: center;
+    margin: 40px 0px 0px 0px;
+    font-size: 11px;
+    letter-spacing: -0.5px;
+}
+
+.content .legend div div {
+    display: inline-block;
+    text-align: left;
+    margin: 0px 8px;
+}
+
+.content .legend div div span:first-of-type {
+    margin-right: 2px;
+    width: 17px;
+    height: 20px;
+    font-size: 14px;
+    padding: 0px 0px 0px 3px;
+}
+
+.content .legend div div span:last-of-type {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+}
+
+.content .legend .edit {
+    cursor: default;
+}
+
+.content .legend .edit.ok {
+    padding-left: 5px;
+    width: 15px;
+}
+
+.content .legend .edit.ok img {
+    width: 11px;
+    padding: 5px 0px 0px 0px;
+}
+
+.content .legend .edit.cancel {
+    padding-left: 4px;
+    width: 16px;
+}
+
+.content .legend .edit.me img {
+    width: 11px;
+    padding: 4px 0px 0px 2px;
+}
+
+.content .legend .edit.other img {
+    width: 11px;
+    padding: 4px 0px 0px 2px;
+}
+
+.content .legend .edit img {
+    width: 11px;
+    padding: 4px 0px 0px 2px;
+}
+
+.content .legend .edit.cancel img {
+    width: 10px;
+    padding: 5px 0px 0px 1px;
+}
+
+.content .legend > div:last-of-type {
+    margin-top: 10px;
+}
+
+/* PATICKA */
+footer {
+    position:relative;
+    text-align: center;
+    margin: 35px 0px 0px 0px;
+}
+
+footer span {
+    z-index: 3;
+    position: relative;
+    padding: 15px 30px;
+    display: inline-block;
+    background: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+footer:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: rgb(45, 40, 40);
+    height: 1px;
+    box-shadow: 0px 0px 20px 0.5px black;
+    width: 100%;
+    transform: translateY(-50%);
+}
