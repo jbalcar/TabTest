@@ -22,5 +22,3 @@ Install:
 * In SQL directory is file to import (best via phpmyadmin)
 * In CONFIG directory must change file database.php with actual connection to MySQL
 * Web must be in http domain root
-
-DEMO: https://test.webit-spec.com/
